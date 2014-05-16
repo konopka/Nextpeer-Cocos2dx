@@ -22,8 +22,9 @@ namespace nextpeer
     NextpeerNotifier::NextpeerNotifier()
     {
 #ifdef USE_EVENT_QUEUE
-        CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(NextpeerNotifier::queueScheduler), this, 0,
-                                                                       kCCRepeatForever, 0, false);
+//        CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(NextpeerNotifier::queueScheduler), this, 0,
+//                                                                       kCCRepeatForever, 0, false);
+        CCDirector::sharedDirector()->getScheduler()->scheduleSelector(schedule_selector(NextpeerNotifier::queueScheduler), this, 0.0f, false, kCCRepeatForever, 0.0f);
 #endif
     }
     
